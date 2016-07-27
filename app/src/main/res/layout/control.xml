@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/carHomeBtn"
+        android:tag="home"
+        android:layout_marginBottom="125dp"
+        android:background="@mipmap/home"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/backBtn" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/fwdBtn"
+        android:tag="forward"
+        android:background="@mipmap/up"
+        android:layout_above="@+id/carHomeBtn"
+        android:layout_toEndOf="@+id/leftBtn" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/backBtn"
+        android:tag="backward"
+        android:background="@mipmap/down"
+        android:layout_below="@+id/leftBtn"
+        android:layout_marginStart="70dp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/leftBtn"
+        android:tag="left"
+        android:background="@mipmap/backward_fine"
+        android:layout_alignTop="@+id/carHomeBtn"
+        android:layout_toStartOf="@+id/carHomeBtn" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:tag="right"
+        android:id="@+id/rightBtn"
+        android:layout_alignTop="@+id/carHomeBtn"
+        android:layout_toEndOf="@+id/carHomeBtn"
+        android:background="@mipmap/forward_fine" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:tag="y+"
+        android:id="@+id/camUpBtn"
+        android:background="@mipmap/up"
+        android:layout_alignTop="@+id/fwdBtn"
+        android:layout_alignStart="@+id/camHomeBtn" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:tag="xy_home"
+        android:id="@+id/camHomeBtn"
+        android:background="@mipmap/home"
+        android:layout_alignTop="@+id/rightBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="70dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:tag="y-"
+        android:id="@+id/camDwnBtn"
+        android:layout_below="@+id/camHomeBtn"
+        android:layout_alignStart="@+id/camHomeBtn"
+        android:background="@mipmap/down" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:tag="x+"
+        android:id="@+id/camRightBtn"
+        android:background="@mipmap/forward_fine"
+        android:layout_below="@+id/camUpBtn"
+        android:layout_toEndOf="@+id/camUpBtn" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:tag="x-"
+        android:id="@+id/camLeftBtn"
+        android:layout_below="@+id/camUpBtn"
+        android:layout_toStartOf="@+id/camUpBtn"
+        android:background="@mipmap/backward_fine" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/speedSeeker"
+        android:max="100"
+        android:progress="0"
+        android:tag="speed"
+        android:indeterminate="false"
+        android:layout_marginTop="35dp"
+        android:layout_toEndOf="@+id/backBtn"
+        android:layout_toStartOf="@+id/camDwnBtn"
+        android:layout_below="@+id/backBtn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/speedTxt"
+        android:text="Speed: "
+        android:layout_below="@+id/backBtn"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Car Control"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:id="@+id/carCtrlTxt"
+        android:layout_alignTop="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Camera Coverage Control"
+        android:id="@+id/textView"
+        android:layout_above="@+id/camUpBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp" />
+
+    <WebView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/webView"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/carCtrlTxt" />
+
+</RelativeLayout>

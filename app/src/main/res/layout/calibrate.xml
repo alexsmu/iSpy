@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Motor"
+        android:id="@+id/motorText"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/leftReverse"
+        android:tag="leftmotor"
+        android:layout_below="@+id/motorText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:textOff="REVERSE"
+        android:checked="false"
+        android:textOn="REVERSE" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rightReverse"
+        android:tag="righttmotor"
+        android:layout_alignTop="@+id/leftReverse"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:textOff="REVERSE"
+        android:textOn="REVERSE" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/runBtn"
+        android:tag="motor_"
+        android:layout_marginTop="15dp"
+        android:layout_alignTop="@+id/leftReverse"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Left"
+        android:id="@+id/leftText"
+        android:layout_marginStart="10dp"
+        android:layout_above="@+id/leftReverse"
+        android:layout_alignStart="@+id/leftReverse" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Right"
+        android:id="@+id/rightText"
+        android:layout_marginEnd="10dp"
+        android:layout_above="@+id/rightReverse"
+        android:layout_alignEnd="@+id/rightReverse" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turning"
+        android:id="@+id/turningTxt"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@+id/runBtn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:id="@+id/fineLeftBtn"
+        android:tag="offset"
+        android:layout_alignTop="@+id/coarseLeftBtn"
+        android:layout_toEndOf="@+id/leftReverse"
+        android:background="@mipmap/backward_fine" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:id="@+id/fineRightBtn"
+        android:tag="offset"
+        android:background="@mipmap/forward_fine"
+        android:layout_alignBottom="@+id/turningTxt"
+        android:layout_toStartOf="@+id/rightReverse" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:id="@+id/coarseLeftBtn"
+        android:tag="offset"
+        android:layout_alignTop="@+id/fineRightBtn"
+        android:layout_toStartOf="@+id/fineLeftBtn"
+        android:background="@mipmap/backward_coarse" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:id="@+id/coarseRightBtn"
+        android:tag="offset"
+        android:layout_alignTop="@+id/fineRightBtn"
+        android:layout_toEndOf="@+id/fineRightBtn"
+        android:background="@mipmap/forward_coarse" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Camera"
+        android:id="@+id/mountTxt"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/turningTxt"
+        android:layout_alignStart="@+id/turningTxt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Pan"
+        android:id="@+id/panTxt"
+        android:layout_alignTop="@+id/fineRightPanBtn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/coarseLeftPanBtn"
+        android:tag="offsetx"
+        android:background="@mipmap/backward_coarse"
+        android:layout_below="@+id/mountTxt"
+        android:layout_alignStart="@+id/coarseLeftBtn"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/fineLeftPanBtn"
+        android:tag="offsetx"
+        android:background="@mipmap/backward_fine"
+        android:layout_alignTop="@+id/coarseLeftPanBtn"
+        android:layout_toEndOf="@+id/coarseLeftPanBtn" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/fineRightPanBtn"
+        android:tag="offsetx"
+        android:background="@mipmap/forward_fine"
+        android:layout_below="@+id/mountTxt"
+        android:layout_toStartOf="@+id/coarseRightPanBtn"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/coarseRightPanBtn"
+        android:tag="offsetx"
+        android:layout_below="@+id/mountTxt"
+        android:layout_alignStart="@+id/rightReverse"
+        android:background="@mipmap/forward_coarse"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Tilt"
+        android:id="@+id/tiltTxt"
+        android:layout_below="@+id/fineLeftPanBtn"
+        android:layout_marginTop="35dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/fineLeftTiltBtn"
+        android:tag="offsety"
+        android:background="@mipmap/backward_fine"
+        android:layout_alignTop="@+id/tiltTxt"
+        android:layout_alignStart="@+id/fineLeftPanBtn" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:id="@+id/coarseLeftTiltBtn"
+        android:tag="offsety"
+        android:layout_alignBottom="@+id/fineLeftTiltBtn"
+        android:layout_toStartOf="@+id/fineLeftTiltBtn"
+        android:background="@mipmap/backward_coarse" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:id="@+id/fineRightTiltBtn"
+        android:tag="offsety"
+        android:layout_alignBottom="@+id/fineLeftTiltBtn"
+        android:layout_alignStart="@+id/fineRightBtn"
+        android:background="@mipmap/forward_fine" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/coarseRightTiltBtn"
+        android:tag="offsety"
+        android:layout_alignBottom="@+id/fineLeftTiltBtn"
+        android:layout_toEndOf="@+id/fineRightTiltBtn"
+        android:background="@mipmap/forward_coarse" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:id="@+id/confirmBtn"
+        android:tag="motor_stop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/fineLeftTiltBtn" />
+</RelativeLayout>

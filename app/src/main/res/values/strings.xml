@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">iSpy</string>
+    <string name="tab1">Calibrate</string>
+    <string name="tab2">Control</string>
+</resources>
